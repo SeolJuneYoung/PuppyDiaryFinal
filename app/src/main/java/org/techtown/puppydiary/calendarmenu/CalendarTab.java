@@ -324,17 +324,17 @@ public class CalendarTab extends AppCompatActivity implements View.OnClickListen
                                 state_waterdrop = my.get(i).getWater();
                                 state_injection = my.get(i).getInject();
 
-                                if(showmonth_pos == (position-dayOfMonth+2)){
+                                if(showmonth_pos == (position - dayOfMonth + 2)){
                                     if (state_waterdrop == 0 && state_injection == 0) {
-                                        finalHolder.waterdrop.setImageResource(R.drawable.waterdrop);
-                                        finalHolder.injection.setImageResource(R.drawable.injection);
+                                        finalHolder.waterdrop.setImageResource(R.drawable.calendar_null);
+                                        finalHolder.injection.setImageResource(R.drawable.calendar_null);
                                     } else if (state_waterdrop == 1 && state_injection == 0) {
                                         //물방울만
                                         finalHolder.waterdrop.setImageResource(R.drawable.waterdrop_color);
-                                        finalHolder.injection.setImageResource(R.drawable.injection);
+                                        finalHolder.injection.setImageResource(R.drawable.calendar_null);
                                     } else if (state_waterdrop == 0 && state_injection == 1) {
                                         //주사기만
-                                        finalHolder.waterdrop.setImageResource(R.drawable.waterdrop);
+                                        finalHolder.waterdrop.setImageResource(R.drawable.calendar_null);
                                         finalHolder.injection.setImageResource(R.drawable.injection_color);
                                     } else if (state_waterdrop == 1 && state_injection == 1) {
                                         //물방울, 주사기 둘 다
@@ -342,7 +342,6 @@ public class CalendarTab extends AppCompatActivity implements View.OnClickListen
                                         finalHolder.injection.setImageResource(R.drawable.injection_color);
                                     }
                                 }
-
                             }
                         }
                     }
